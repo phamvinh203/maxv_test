@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ScrollToTopButton from "@/components/layout/ScrollToTopButton";
+import { buildBaseMetadata } from "@/lib/seo";
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
@@ -19,10 +20,7 @@ const robotoSlab = Roboto_Slab({
   adjustFontFallback: true,
 });
 
-export const metadata: Metadata = {
-  title: "Maxv Accounting - Phần mềm kế toán online",
-  description: "Maxv Accounting là phần mềm kế toán online trên nền điện toán đám mây dành cho doanh nghiệp vừa và nhỏ.",
-};
+export const metadata: Metadata = buildBaseMetadata();
 
 export default function RootLayout({
   children,
