@@ -90,6 +90,7 @@ function HeroSection() {
                 width={1200}
                 height={820}
                 className="relative w-full rounded-2xl shadow-2xl hover:shadow-blue-500/20 transition-shadow duration-500"
+                priority
               />
 
               
