@@ -3,6 +3,7 @@ import { Open_Sans, Roboto_Slab } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import ScrollToTopButton from "@/components/layout/ScrollToTopButton";
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
@@ -42,6 +43,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <ScrollToTopButton />
       </body>
     </html>
   );
