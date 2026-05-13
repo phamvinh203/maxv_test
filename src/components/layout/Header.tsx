@@ -34,6 +34,7 @@ function Header() {
               className="h-10 w-auto"
               width={200}
               height={60}
+              priority
             />
           </a>
 
