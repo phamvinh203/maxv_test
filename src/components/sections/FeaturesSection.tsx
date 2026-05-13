@@ -108,9 +108,11 @@ function FeaturesSection() {
                     <Image
                       src={group.image}
                       alt={group.title}
+                      fill
                       className={`h-full w-full object-cover transition-all duration-700 ${
                         isHovered ? "scale-105" : "scale-100"
                       }`}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                     {/* Overlay on Hover */}
                     <div className={`absolute inset-0 flex items-center justify-center bg-black/40 transition-opacity duration-300 ${
@@ -172,11 +174,13 @@ function FeaturesSection() {
 
             {/* Modal Content */}
             <div className="space-y-6 p-6">
-              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-100 to-slate-200">
+              <div className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-gradient-to-br from-slate-100 to-slate-200">
                 <Image
                   src={currentImage}
                   alt={currentTitle}
+                  fill
                   className="w-full object-cover"
+                  sizes="100vw"
                 />
               </div>
               <div className="space-y-2">

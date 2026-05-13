@@ -32,6 +32,8 @@ function Header() {
               src="https://maxv.vn/wp-content/uploads/2024/04/Logo-Maxv-200x60-New-01.png"
               alt="MAXV"
               className="h-10 w-auto"
+              width={200}
+              height={60}
             />
           </a>
 

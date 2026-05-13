@@ -35,7 +35,9 @@ function SolutionsSection() {
                 <Image
                   src={item.image}
                   alt={item.title}
+                  fill
                   className="h-full w-full object-contain"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                 />
                 {/* Image Overlay on Hover */}
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-50/30 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />

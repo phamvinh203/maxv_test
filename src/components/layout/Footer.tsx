@@ -139,6 +139,8 @@ function Footer() {
                 className="h-12 w-auto"
                 src="https://maxv.vn/wp-content/uploads/2022/08/DMCA_logo-grn-btn150w.png"
                 alt="DMCA Protected"
+                width={150}
+                height={53}
               />
             </section>
           </div>
@@ -148,8 +150,8 @@ function Footer() {
       {/* Copyright */}
       <div className="bg-[#2778d6] py-4 text-center text-[15px] leading-relaxed text-white">
         <p>
-          Giấy chứng nhận Đăng ký Kinh doanh số 0106200129, cấp tại Chi cục
-          Thuế Quận Cầu Giấy.
+          Giấy chứng nhận Đăng ký Kinh doanh số 0106200129, cấp tại Chi cục Thuế
+          Quận Cầu Giấy.
         </p>
         <p>Copyright 2013 © maxv.vn . All Rights Reserved.</p>
       </div>

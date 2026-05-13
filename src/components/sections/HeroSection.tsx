@@ -87,6 +87,8 @@ function HeroSection() {
               <Image
                 src="https://maxv.vn/wp-content/uploads/2022/08/Laptop-Maxv-Accounting-1200x820-3-01-min.png"
                 alt="Phần mềm kế toán Maxv Accounting"
+                width={1200}
+                height={820}
                 className="relative w-full rounded-2xl shadow-2xl hover:shadow-blue-500/20 transition-shadow duration-500"
               />
 
