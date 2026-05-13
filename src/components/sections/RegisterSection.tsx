@@ -1,7 +1,67 @@
+"use client";
+
+import type { FormEvent } from "react";
+import { useState } from "react";
 import { registerBenefits } from "@/constants/sectionData";
 import { Button } from "@/components/ui/button";
 
 function RegisterSection() {
+  const [status, setStatus] = useState<{
+    type: "idle" | "success" | "error";
+    message: string;
+  }>({
+    type: "idle",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setIsSubmitting(true);
+    setStatus({ type: "idle", message: "" });
+
+    const formData = new FormData(event.currentTarget);
+
+    try {
+      const response = await fetch("/api/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          phone: formData.get("phone"),
+          email: formData.get("email"),
+          package: formData.get("package"),
+        }),
+      });
+
+      const result = (await response.json()) as { message?: string };
+
+      if (!response.ok) {
+        throw new Error(result.message || "Không thể gửi đăng ký.");
+      }
+
+      event.currentTarget?.reset();
+      setStatus({
+        type: "success",
+        message:
+          result.message ||
+          "Đăng ký thành công. Maxv sẽ liên hệ hỗ trợ bạn trong thời gian sớm nhất.",
+      });
+    } catch (error) {
+      setStatus({
+        type: "error",
+        message:
+          error instanceof Error
+            ? error.message
+            : "Không thể gửi đăng ký lúc này. Vui lòng thử lại sau.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
   return (
     <section className="relative bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-100 section-padding" id="dang-ky">
       {/* Background Pattern */}
@@ -80,6 +140,7 @@ function RegisterSection() {
           <form
             className="group relative rounded-2xl bg-white/80 backdrop-blur-sm p-8 shadow-lg hover:shadow-2xl transition-all duration-500 animate-in fade-in slide-in-from-right-8 duration-1000 delay-200"
             id="dang-ky-form"
+            onSubmit={handleSubmit}
           >
             {/* Gradient Overlay on Hover */}
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/0 via-cyan-500/0 to-blue-500/0 transition-all duration-500 group-hover:from-blue-500/5 group-hover:via-cyan-500/5 group-hover:to-blue-500/5" />
@@ -161,9 +222,22 @@ function RegisterSection() {
                 type="submit"
                 className="w-full bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white shadow-md hover:shadow-orange-500/25 transition-all duration-300"
                 size="lg"
+                disabled={isSubmitting}
               >
-                Đăng ký ngay
+                {isSubmitting ? "Đang gửi..." : "Đăng ký ngay"}
               </Button>
+              {status.type !== "idle" && (
+                <p
+                  className={`rounded-xl px-4 py-3 text-sm font-medium ${
+                    status.type === "success"
+                      ? "bg-emerald-50 text-emerald-700"
+                      : "bg-red-50 text-red-700"
+                  }`}
+                  role="status"
+                >
+                  {status.message}
+                </p>
+              )}
             </div>
 
           </form>
