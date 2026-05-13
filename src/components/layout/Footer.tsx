@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const policyLinks = [
   "Giới thiệu",
   "Sơ đồ Website",
@@ -133,7 +135,7 @@ function Footer() {
                 </a>
               </div>
 
-              <img
+              <Image
                 className="h-12 w-auto"
                 src="https://maxv.vn/wp-content/uploads/2022/08/DMCA_logo-grn-btn150w.png"
                 alt="DMCA Protected"

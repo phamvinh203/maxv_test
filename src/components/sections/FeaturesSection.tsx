@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { featureGroups } from "@/constants/sectionData";
 import { X } from "lucide-react";
+import Image from "next/image";
 
 function FeaturesSection() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -104,7 +105,7 @@ function FeaturesSection() {
                     onClick={() => openModal(group.image, group.title)}
                     title="Click để xem hình ảnh lớn hơn"
                   >
-                    <img
+                    <Image
                       src={group.image}
                       alt={group.title}
                       className={`h-full w-full object-cover transition-all duration-700 ${
@@ -172,7 +173,7 @@ function FeaturesSection() {
             {/* Modal Content */}
             <div className="space-y-6 p-6">
               <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-100 to-slate-200">
-                <img
+                <Image
                   src={currentImage}
                   alt={currentTitle}
                   className="w-full object-cover"

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 function HeroSection() {
   return (
@@ -83,7 +84,7 @@ function HeroSection() {
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-cyan-500/20 rounded-3xl blur-2xl"></div>
 
               {/* Main Image */}
-              <img
+              <Image
                 src="https://maxv.vn/wp-content/uploads/2022/08/Laptop-Maxv-Accounting-1200x820-3-01-min.png"
                 alt="Phần mềm kế toán Maxv Accounting"
                 className="relative w-full rounded-2xl shadow-2xl hover:shadow-blue-500/20 transition-shadow duration-500"

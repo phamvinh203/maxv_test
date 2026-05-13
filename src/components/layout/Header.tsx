@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const landingLinks = [
   { label: "Giải pháp", href: "#giai-phap" },
@@ -27,7 +28,7 @@ function Header() {
             aria-label="Maxv"
             onClick={closeMenu}
           >
-            <img
+            <Image
               src="https://maxv.vn/wp-content/uploads/2024/04/Logo-Maxv-200x60-New-01.png"
               alt="MAXV"
               className="h-10 w-auto"

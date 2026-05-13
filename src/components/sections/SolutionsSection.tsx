@@ -1,4 +1,5 @@
 import { solutionCards } from "@/constants/sectionData";
+import Image from "next/image";
 
 function SolutionsSection() {
   return (
@@ -31,7 +32,7 @@ function SolutionsSection() {
 
               {/* Image Container */}
               <div className="relative aspect-video overflow-hidden bg-white p-4">
-                <img
+                <Image
                   src={item.image}
                   alt={item.title}
                   className="h-full w-full object-contain"
