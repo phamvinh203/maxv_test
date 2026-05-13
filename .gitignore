@@ -42,3 +42,8 @@ next-env.d.ts
 
 .vscode/
 .github/copilot-commit-message-instructions.md
+
+.agents
+.claude
+skills-lock.json
+.mcp.json
