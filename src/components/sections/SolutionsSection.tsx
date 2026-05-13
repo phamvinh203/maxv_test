@@ -12,7 +12,7 @@ function SolutionsSection() {
           <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
             Giải quyết vấn đề{" "}
             <span className="text-gradient-primary">đơn giản</span>{" "}
-            bằng phần mềm Maxv Accounting
+            bằng phần mềm <span className="text-gradient-primary">Maxv Accounting</span>{" "}
           </h2>
         </div>
 

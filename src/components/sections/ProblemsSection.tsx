@@ -7,7 +7,7 @@ function ProblemsSection() {
         {/* Section Header */}
         <div className="mb-16 max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
           
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl md:text-5xl whitespace-nowrap">
             Những{" "}
             <span className="text-gradient-primary">vấn đề</span>{" "}
             kế toán & doanh nghiệp đang gặp phải
