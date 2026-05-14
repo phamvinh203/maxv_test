@@ -107,7 +107,7 @@ function FeaturesSection() {
                   >
                     <Image
                       src={group.image}
-                      alt={group.title}
+                      alt={group.imageAlt}
                       fill
                       className={`h-full w-full object-cover transition-all duration-700 ${
                         isHovered ? "scale-105" : "scale-100"
@@ -177,7 +177,7 @@ function FeaturesSection() {
               <div className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-gradient-to-br from-slate-100 to-slate-200">
                 <Image
                   src={currentImage}
-                  alt={currentTitle}
+                  alt={`Phân hệ ${currentTitle.toLowerCase()} - phần mềm kế toán Maxv Accounting`}
                   fill
                   className="w-full object-cover"
                   sizes="100vw"

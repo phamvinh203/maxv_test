@@ -86,7 +86,7 @@ function HeroSection() {
               {/* Main Image */}
               <Image
                 src="https://maxv.vn/wp-content/uploads/2022/08/Laptop-Maxv-Accounting-1200x820-3-01-min.png"
-                alt="Phần mềm kế toán Maxv Accounting"
+                alt="Giao diện phần mềm kế toán online Maxv Accounting trên laptop - giải pháp kế toán đám mây cho doanh nghiệp vừa và nhỏ"
                 width={1200}
                 height={820}
                 className="relative w-full rounded-2xl shadow-2xl hover:shadow-blue-500/20 transition-shadow duration-500"

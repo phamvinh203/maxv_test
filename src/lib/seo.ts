@@ -3,7 +3,7 @@ import { faqItems, pricingPlans } from "@/constants/sectionData";
 
 const normalizeSiteUrl = (url?: string) => {
   if (!url) {
-    return "https://maxv-test.vercel.app";
+    return "https://mvacc.maxv.vn";
   }
 
   const withProtocol = /^https?:\/\//i.test(url) ? url : `https://${url}`;
@@ -23,7 +23,7 @@ export const siteConfig = {
   url: siteUrl,
   title: "Maxv Accounting - Phần mềm kế toán online cho doanh nghiệp",
   description:
-    "Maxv Accounting là phần mềm kế toán online trên nền điện toán đám mây, hỗ trợ hóa đơn điện tử, báo cáo thuế, quản trị tài chính và làm việc từ xa cho doanh nghiệp vừa và nhỏ.",
+    "Maxv Accounting - Phần mềm kế toán online hàng đầu cho doanh nghiệp vừa và nhỏ. Kết nối hóa đơn điện tử, báo cáo thuế tự động theo Thông tư 133 & 200, làm việc từ xa. Dùng thử miễn phí!",
   ogImage:
     "https://maxv.vn/wp-content/uploads/2022/08/Laptop-Maxv-Accounting-1200x820-3-01-min.png",
   keywords: [
@@ -34,6 +34,15 @@ export const siteConfig = {
     "kế toán đám mây",
     "hóa đơn điện tử",
     "báo cáo thuế",
+    "phần mềm kế toán doanh nghiệp vừa và nhỏ",
+    "phần mềm kế toán thông tư 133",
+    "phần mềm kế toán thông tư 200",
+    "phần mềm kế toán xây dựng",
+    "phần mềm kế toán sản xuất",
+    "kế toán online",
+    "quản lý tài chính doanh nghiệp",
+    "báo cáo tài chính online",
+    "phần mềm kế toán cho dịch vụ kế toán",
   ],
   contact: {
     email: "SoftMaxv@gmail.com",
@@ -50,9 +59,9 @@ export const siteConfig = {
   pages: [
     {
       path: "/",
-      title: "Maxv Accounting - Phần mềm kế toán online cho doanh nghiệp",
+      title: "Phần mềm kế toán online Maxv Accounting | Đám mây, Hóa đơn điện tử, TT 133 & 200",
       description:
-        "Phần mềm kế toán online Maxv Accounting hỗ trợ doanh nghiệp vừa và nhỏ làm việc từ xa, quản lý hóa đơn điện tử, báo cáo thuế và tài chính trên nền điện toán đám mây.",
+        "Maxv Accounting - Phần mềm kế toán online cho doanh nghiệp vừa và nhỏ. Hỗ trợ hóa đơn điện tử, báo cáo thuế theo Thông tư 133 & 200, làm việc từ xa, quản lý nhiều công ty. Dùng thử miễn phí!",
       changeFrequency: "monthly",
       priority: 1,
     },
@@ -86,6 +95,10 @@ export function buildBaseMetadata(): Metadata {
       },
     },
     category: "software",
+    other: {
+      "geo.region": "VN",
+      "geo.placename": "Hà Nội",
+    },
   };
 }
 
@@ -96,7 +109,11 @@ export function buildPageMetadata(path = "/"): Metadata {
     title: page.title,
     description: page.description,
     alternates: {
-      canonical: page.path,
+      canonical: getSiteUrl(page.path),
+      languages: {
+        "vi-VN": getSiteUrl(page.path),
+        "x-default": getSiteUrl(page.path),
+      },
     },
     openGraph: {
       title: page.title,
@@ -146,10 +163,11 @@ export function buildSitemap(): MetadataRoute.Sitemap {
 }
 
 export function buildStructuredData() {
-  const lowestPublishedPrice = pricingPlans
-    .flatMap((plan) => plan.rows.map(([, price]) => Number(price.replace(/\D/g, ""))))
-    .filter((price) => price > 0)
-    .sort((a, b) => a - b)[0];
+  const lowestPublishedPrice =
+    pricingPlans
+      .flatMap((plan) => plan.rows.map(([, price]) => Number(price.replace(/\D/g, ""))))
+      .filter((price) => price > 0)
+      .sort((a, b) => a - b)[0] ?? 0;
 
   return [
     {
@@ -184,6 +202,20 @@ export function buildStructuredData() {
       url: siteConfig.url,
       image: siteConfig.ogImage,
       description: siteConfig.description,
+      featureList: [
+        "Kế toán tổng hợp",
+        "Kế toán tiền",
+        "Kế toán bán hàng",
+        "Kế toán mua hàng",
+        "Hàng tồn kho",
+        "Tài sản cố định",
+        "Báo cáo thuế GTGT",
+        "Hóa đơn điện tử",
+        "Giá thành dự án",
+        "Giá thành sản xuất",
+        "Báo cáo Thông tư 133",
+        "Báo cáo Thông tư 200",
+      ],
       offers: {
         "@type": "Offer",
         price: String(lowestPublishedPrice),
@@ -207,6 +239,36 @@ export function buildStructuredData() {
           text: item.answer,
         },
       })),
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      name: "Maxv Accounting - Phần mềm kế toán online cho doanh nghiệp",
+      description:
+        "Giới thiệu các vấn đề kế toán doanh nghiệp thường gặp và giải pháp phần mềm kế toán online Maxv Accounting.",
+      thumbnailUrl: "https://img.youtube.com/vi/DcRmx9KwS0w/maxresdefault.jpg",
+      embedUrl: "https://www.youtube.com/embed/DcRmx9KwS0w",
+      uploadDate: "2022-12-01",
+      publisher: {
+        "@type": "Organization",
+        name: siteConfig.companyName,
+        logo: {
+          "@type": "ImageObject",
+          url: "https://maxv.vn/wp-content/uploads/2024/04/Logo-Maxv-200x60-New-01.png",
+        },
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Giới thiệu", item: `${siteConfig.url}/#gioi-thieu` },
+        { "@type": "ListItem", position: 2, name: "Vấn đề kế toán", item: `${siteConfig.url}/#van-de-ke-toan` },
+        { "@type": "ListItem", position: 3, name: "Giải pháp", item: `${siteConfig.url}/#giai-phap` },
+        { "@type": "ListItem", position: 4, name: "Tính năng", item: `${siteConfig.url}/#tinh-nang` },
+        { "@type": "ListItem", position: 5, name: "Bảng giá", item: `${siteConfig.url}/#bao-gia` },
+        { "@type": "ListItem", position: 6, name: "FAQ", item: `${siteConfig.url}/#faq` },
+      ],
     },
   ];
 }

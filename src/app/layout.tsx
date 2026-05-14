@@ -31,6 +31,7 @@ export default function RootLayout({
     <html
       lang="vi"
       className={`${openSans.variable} ${robotoSlab.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
       <head />
       <body className="min-h-full flex flex-col">

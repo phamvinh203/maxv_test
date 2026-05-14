@@ -12,21 +12,25 @@ export const solutionCards = [
     title: "Chủ động công việc",
     text: "Nhiều người có thể làm việc cùng lúc, quản lý dữ liệu online, tránh rủi ro mất dữ liệu do sự cố máy tính.",
     image: "https://maxv.vn/wp-content/uploads/2022/12/chu-dong-trong-cong-viec-maxv.jpg",
+    imageAlt: "Làm việc cùng lúc trên phần mềm kế toán online Maxv Accounting - chủ động công việc từ xa",
   },
   {
     title: "Nâng cao năng suất",
     text: "Tự động hạch toán từ hóa đơn, bảng Excel, tổng hợp báo cáo thuế và BCTC chính xác, nhanh chóng.",
     image: "https://maxv.vn/wp-content/uploads/2022/12/nang-cao-nang-suat-maxv.jpg",
+    imageAlt: "Tự động hạch toán và báo cáo thuế trên phần mềm kế toán Maxv Accounting - nâng cao năng suất",
   },
   {
     title: "Quản trị tức thời",
     text: "Nắm rõ doanh thu, lợi nhuận, chi phí, dòng tiền, công nợ, tồn kho mọi lúc, mọi nơi.",
     image: "https://maxv.vn/wp-content/uploads/2022/12/quan-tri-tai-chinh-tuc-thoi-maxv.jpg",
+    imageAlt: "Quản trị tài chính tức thời - theo dõi doanh thu lợi nhuận trên Maxv Accounting",
   },
   {
     title: "Tiếp cận dễ dàng",
     text: "Không cần cài đặt, hướng dẫn sử dụng chi tiết, giao diện trực quan giúp người dùng dễ tiếp cận.",
     image: "https://maxv.vn/wp-content/uploads/2022/12/su-dung-de-dang-maxv.jpg",
+    imageAlt: "Giao diện phần mềm kế toán Maxv Accounting dễ sử dụng - không cần cài đặt",
   },
 ];
 
@@ -54,61 +58,73 @@ export const featureGroups = [
     title: "Hệ thống",
     items: ["Khai báo người dùng, phân quyền", "Khai báo quyển chứng từ phân quyền người dùng"],
     image: "https://maxv.vn/wp-content/uploads/2022/10/phan-he-he-thong-maxv-accounting-min.png",
+    imageAlt: "Phân hệ hệ thống - phân quyền người dùng trong phần mềm kế toán Maxv Accounting",
   },
   {
     title: "Kế toán tổng hợp",
     items: ["Hạch toán phiếu kế toán", "Kết chuyển, phân bổ, tỷ giá", "Sổ sách chứng từ, bảng kê, tra cứu số liệu"],
     image: "https://maxv.vn/wp-content/uploads/2022/10/phan-he-ke-toan-tong-hop-maxv-accounting.png",
+    imageAlt: "Phân hệ kế toán tổng hợp - hạch toán và sổ sách chứng từ trên Maxv Accounting",
   },
   {
     title: "Kế toán tiền",
     items: ["Hạch toán phiếu thu chi", "Các bút toán cuối kỳ", "Tra cứu số liệu nhanh"],
     image: "https://maxv.vn/wp-content/uploads/2022/10/phan-he-ke-toan-tien-maxv-accounting-min.png",
+    imageAlt: "Phân hệ kế toán tiền - hạch toán phiếu thu chi trên phần mềm kế toán Maxv Accounting",
   },
   {
     title: "Kế toán bán hàng",
     items: ["Theo dõi đơn hàng, hợp đồng", "Xuất hóa đơn bán hàng, dịch vụ", "Theo dõi công nợ khách hàng"],
     image: "https://maxv.vn/wp-content/uploads/2022/10/phan-he-ke-toan-ban-hang-maxv-accounting-min.png",
+    imageAlt: "Phân hệ kế toán bán hàng - quản lý hóa đơn và công nợ khách hàng trên Maxv Accounting",
   },
   {
     title: "Kế toán mua hàng",
     items: ["Theo dõi hóa đơn mua hàng", "Tập hợp chi phí mua hàng", "Báo cáo công nợ nhà cung cấp"],
     image: "https://maxv.vn/wp-content/uploads/2022/10/phan-he-ke-toan-mua-hang-maxv-accounting-min.png",
+    imageAlt: "Phân hệ kế toán mua hàng - theo dõi hóa đơn và công nợ nhà cung cấp trên Maxv Accounting",
   },
   {
     title: "Hàng tồn kho",
     items: ["Theo dõi nhập xuất tồn", "Tính giá vốn hàng tồn kho", "Báo cáo kho chi tiết"],
     image: "https://maxv.vn/wp-content/uploads/2022/10/phan-he-ke-toan-hang-ton-kho-maxv-accounting-min.png",
+    imageAlt: "Phân hệ hàng tồn kho - quản lý nhập xuất tồn và giá vốn trên phần mềm kế toán Maxv Accounting",
   },
   {
     title: "Tài sản cố định",
     items: ["Cập nhật tăng giảm TSCĐ", "Tính khấu hao tự động", "Báo cáo phân bổ khấu hao"],
     image: "https://maxv.vn/wp-content/uploads/2022/10/phan-he-ke-toan-tscd-maxv-accounting-min.png",
+    imageAlt: "Phân hệ tài sản cố định - tính khấu hao tự động trên phần mềm kế toán Maxv Accounting",
   },
   {
     title: "Công cụ dụng cụ",
     items: ["Cập nhật CCDC, chi phí trả trước", "Điều chỉnh tăng giảm", "Báo cáo kiểm kê"],
     image: "https://maxv.vn/wp-content/uploads/2022/10/phan-he-ke-toan-CCDC-maxv-accounting-min.png",
+    imageAlt: "Phân hệ công cụ dụng cụ - quản lý CCDC và chi phí trả trước trên Maxv Accounting",
   },
   {
     title: "Báo cáo thuế",
     items: ["Bảng kê hóa đơn mua vào, bán ra", "Tờ khai thuế GTGT trong kỳ"],
     image: "https://maxv.vn/wp-content/uploads/2022/10/phan-he-ke-toan-thue-maxv-accounting-min.png",
+    imageAlt: "Phân hệ báo cáo thuế - lập tờ khai thuế GTGT và bảng kê hóa đơn trên Maxv Accounting",
   },
   {
     title: "Giá thành dự án",
     items: ["Cập nhật dự án, công trình", "Báo cáo chi phí, doanh thu, lãi lỗ theo công trình"],
     image: "https://maxv.vn/wp-content/uploads/2022/10/phan-he-ke-toan-du-an-maxv-accounting-min.png",
+    imageAlt: "Phân hệ giá thành dự án - quản lý chi phí và lãi lỗ công trình xây lắp trên Maxv Accounting",
   },
   {
     title: "Giá thành sản xuất",
     items: ["Cập nhật định mức", "Tính giá thành tổng hợp cuối kỳ", "Báo cáo nguyên vật liệu, giá thành"],
     image: "https://maxv.vn/wp-content/uploads/2022/10/phan-he-ke-toan-gia-thanh-maxv-accounting-min.png",
+    imageAlt: "Phân hệ giá thành sản xuất - tính giá thành và báo cáo nguyên vật liệu trên Maxv Accounting",
   },
   {
     title: "Hóa đơn điện tử",
     items: ["Kết nối hóa đơn điện tử với tổng cục thuế", "Lấy hóa đơn mua vào, bán ra", "Bảng kê hóa đơn điện tử"],
     image: "https://maxv.vn/wp-content/uploads/2024/09/Phan-he-hoa-don-dien-tu-lay-hoa-don-dien-tu-tu-tong-cuc-thue.png",
+    imageAlt: "Phân hệ hóa đơn điện tử - kết nối tổng cục thuế lấy hóa đơn mua vào bán ra trên Maxv Accounting",
   },
 ];
 
