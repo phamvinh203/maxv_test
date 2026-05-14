@@ -25,7 +25,6 @@ function ScrollToTopButton() {
     <a
       href="#top"
       aria-label="Trở về đầu trang"
-      aria-hidden={!isVisible}
       tabIndex={isVisible ? 0 : -1}
       className={cn(
         "fixed bottom-5 right-5 z-50 flex size-12 items-center justify-center rounded-full bg-gradient-to-br from-sky-500 to-cyan-500 text-white shadow-blue-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl focus-visible:ring-4 focus-visible:ring-sky-300 sm:bottom-6 sm:right-6",

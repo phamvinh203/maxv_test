@@ -34,7 +34,7 @@ function SolutionsSection() {
               <div className="relative aspect-video overflow-hidden bg-white p-4">
                 <Image
                   src={item.image}
-                  alt={item.title}
+                  alt={item.imageAlt}
                   fill
                   className="h-full w-full object-contain"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
