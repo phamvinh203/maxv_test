@@ -162,7 +162,7 @@ function FeaturesSection() {
           onKeyDown={handleKeyDown}
           role="presentation"
         >
-          <div className="relative max-h-[90vh] max-w-5xl overflow-auto rounded-3xl bg-white p-2 shadow-2xl animate-in zoom-in duration-300">
+          <div className="relative max-h-[90vh] w-full max-w-5xl overflow-auto rounded-3xl bg-white p-2 shadow-2xl animate-in zoom-in duration-300">
             {/* Enhanced Close Button */}
             <button
               className="absolute right-6 top-6 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
